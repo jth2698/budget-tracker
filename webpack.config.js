@@ -3,7 +3,7 @@ const path = require('path');
 
 const config = {
     entry: {
-        app: './public/index.js',
+        app: './dist/js/index.js',
     },
     output: {
         path: __dirname + '/dist',
@@ -29,14 +29,14 @@ const config = {
             publicPath: '/dist/',
             fingerprints: false,
             name: 'Budget Tracker App',
-            short_name: 'NBudget Tracker',
+            short_name: 'Budget Tracker',
             description: 'An application that allows you to track your budget both online and offline.',
             background_color: '#01579b',
             theme_color: '#ffffff',
             'theme-color': '#ffffff',
             start_url: '/',
             icons: [{
-                src: path.resolve('public/icons/icon-192x192.png'),
+                src: path.resolve('icons/icon-192x192.png'),
                 sizes: [192, 512],
                 destination: path.join('assets', 'icons'),
             }],

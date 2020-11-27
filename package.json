@@ -1,13 +1,16 @@
 {
-  "name": "budget-app",
+  "name": "budget-tracker-app",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "lite-server": "lite-server",
-    "webpack": "webpack"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "npm run build && node server.js",
+    "start:dev": "concurrently \"npm run server\" \"cd budget-tracker && npm run start\"",
+    "server": "nodemon server.js --ignore budget-tracker",
+    "build": "cd budget-tracker && npm run build",
+    "lite-server": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -22,10 +25,11 @@
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1",
+    "if-env": "^1.0.4",
     "lite-server": "^2.5.3",
     "mongoose": "^5.5.15",
     "morgan": "^1.9.1",
-    "workbox": "0.0.0"
+    "webpack": "^5.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -34,7 +38,6 @@
     "babel-loader": "^8.0.6",
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4",
-    "webpack": "^5.5.1",
     "webpack-cli": "^4.2.0",
     "webpack-pwa-manifest": "^4.0.0"
   }
