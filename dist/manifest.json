@@ -15,7 +15,7 @@
   "short_name": "NBudget Tracker",
   "orientation": "portrait",
   "display": "standalone",
-  "start_url": "/",
+  "start_url": "localhost:3000",
   "description": "An application that allows you to track your budget both online and offline.",
   "background_color": "#01579b",
   "theme_color": "#ffffff",
