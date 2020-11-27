@@ -1,21 +1,20 @@
 {
   "icons": [
     {
-      "src": "/dist/assets/icons/icon_512x512.png",
+      "src": "/assets/icons/icon_512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/dist/assets/icons/icon_192x192.png",
+      "src": "/assets/icons/icon_192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     }
   ],
   "name": "Budget Tracker App",
-  "short_name": "NBudget Tracker",
+  "short_name": "Budget Tracker",
   "orientation": "portrait",
-  "display": "standalone",
-  "start_url": "localhost:3000",
+  "display": "index.html",
   "description": "An application that allows you to track your budget both online and offline.",
   "background_color": "#01579b",
   "theme_color": "#ffffff",

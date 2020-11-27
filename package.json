@@ -5,7 +5,6 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "npm run webpack --watch",
     "start": "node server.js",
     "lite-server": "lite-server",
     "webpack": "webpack"
@@ -25,7 +24,8 @@
     "express": "^4.17.1",
     "lite-server": "^2.5.3",
     "mongoose": "^5.5.15",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "workbox": "0.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
