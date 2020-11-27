@@ -5,8 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm run webpack --watch",
     "start": "node server.js",
-    "lite-server": "lite-server"
+    "lite-server": "lite-server",
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,16 @@
     "lite-server": "^2.5.3",
     "mongoose": "^5.5.15",
     "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4",
+    "webpack": "^5.5.1",
+    "webpack-cli": "^4.2.0",
+    "webpack-pwa-manifest": "^4.0.0"
   }
 }
