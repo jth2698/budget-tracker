@@ -5,12 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "npm run build && node server.js",
-    "start:dev": "concurrently \"npm run server\" \"cd budget-tracker && npm run start\"",
-    "server": "nodemon server.js --ignore budget-tracker",
-    "build": "cd budget-tracker && npm run build",
-    "lite-server": "lite-server"
+    "prestart": "npm run webpack --watch",
+    "start": "node server.js",
+    "lite-server": "lite-server",
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -28,8 +26,7 @@
     "if-env": "^1.0.4",
     "lite-server": "^2.5.3",
     "mongoose": "^5.5.15",
-    "morgan": "^1.9.1",
-    "webpack": "^5.8.0"
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -38,6 +35,7 @@
     "babel-loader": "^8.0.6",
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4",
+    "webpack": "^5.8.0",
     "webpack-cli": "^4.2.0",
     "webpack-pwa-manifest": "^4.0.0"
   }
